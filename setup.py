@@ -2,7 +2,7 @@ import os
 
 import setuptools
 
-from homeless_compas import __version__
+from homeless_compass import __version__
 
 
 def read(fname):
@@ -34,11 +34,12 @@ setuptools.setup(
     ],
     extras_require={
         "dev": [
-            "buildozer==1.2.0"
+            "buildozer==1.2.0",
+            "cython"
         ],
-        "android": [
-            "pyjnius"
-        ]
+        # "android": [
+        #     "pyjnius"
+        # ]
     },
     python_requires='>=3.7, <3.9, <4',
 )
