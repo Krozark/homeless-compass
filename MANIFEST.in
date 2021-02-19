@@ -1,0 +1,4 @@
+exclude *.md
+
+# include homeless_compas/*json
+# include homeless_compas/*kv
