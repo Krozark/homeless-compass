@@ -29,7 +29,8 @@ setuptools.setup(
       "Operating System :: OS Independent",
     ],
     install_requires=[
-        "kivy~=1.11",
+        "plyer",
+        "kivy[base]",
     ],
     extras_require={
         "dev": [
