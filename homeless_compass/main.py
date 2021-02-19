@@ -9,28 +9,12 @@ from kivy.lang import Builder
 
 import logging
 
+from homeless_compass import settings
+
 logger = logging.getLogger(__name__)
 
 logging.basicConfig(level=logging.DEBUG)
 
-Builder.load_string('''
-<GPSDemo>:
-    BoxLayout:
-        orientation: 'vertical'
-        
-        Label:
-            text: root.gps_location
-        
-        Label:
-            text: root.gps_status
-        
-        Button:
-            id: toggle_button
-            text: 'start'
-            size_hint_y: 0.2
-            on_press: root.do_toggle()
-        
-''')
 
 class GPSDemo(BoxLayout):
     gps_location = StringProperty()
@@ -70,6 +54,7 @@ class MainApp(App):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        Builder.load_file(settings.STYLE_FILENAME)
 
 
     def request_android_permissions(self):
