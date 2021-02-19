@@ -56,7 +56,6 @@ class MainApp(App):
         super().__init__(*args, **kwargs)
         Builder.load_file(settings.STYLE_FILENAME)
 
-
     def request_android_permissions(self):
         """
         Since API 23, Android requires permission to be requested at runtime.
